@@ -9,6 +9,7 @@
 :root {
   --font: "Montserrat", sans-serif;
   --color: #772583;
+  --color-30: hsla(292, 56%, 33%, 0.30);
 }
 
 body {
