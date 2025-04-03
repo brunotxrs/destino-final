@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import '../css/RendaInput.css'
+import '../css/Input.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { Contexts } from "../contexts/Context"
@@ -16,16 +16,16 @@ function RendaInput() {
 
 
     return (
-        <div className="container-renda">
-            <form className="box-renda">
+        <div className="container-input-mobile">
+            <form className="box-input-mobile">
 
                 <fieldset className="box-fieldset">
-                    <legend>Rendas $</legend>
+                    <legend className="legend">Rendas $</legend>
 
                     {rendas.map((renda) => (
 
-                        <label for="" key={renda.id}>
-                            <input type="text"  placeholder="Ex: Salário"
+                        <label className="label" for="" key={renda.id}>
+                            <input className="input" type="text"  placeholder="Ex: Salário"
                             autoComplete="off"
                             value={renda.texto}
                             onChange={(f) => 
@@ -33,7 +33,7 @@ function RendaInput() {
                             }
                             />
                     
-                            <input type="number" placeholder="Valor R$"
+                            <input className="input" type="number" placeholder="Valor R$"
                             autoComplete="off"
                             value={renda.valor}
                             onChange={(f) => 
@@ -41,7 +41,7 @@ function RendaInput() {
                             }
                             />
                     
-                            <div className="box-icon">  
+                            <div className="box-icon-input-mobile">  
                                 <span className="icon-minus"
                                 onClick={() => 
                                     handleRemoveRenda(renda.id)
@@ -56,7 +56,7 @@ function RendaInput() {
 
                     
 
-                     <div className="add-more">
+                     <div className="add-more-mobile">
                         <span className="icon-plus"
                         onClick={handleAddRenda}>
                             <FontAwesomeIcon icon={faPlus} />
