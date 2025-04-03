@@ -8,10 +8,15 @@
 
 :root {
   --font: "Montserrat", sans-serif;
-  --color: #772583;
-  --color-30: #7725834d;
+  --color-first: #772583;
+  --color-second: #300F36;
+  --color-third: #AB35BE;
   --color-black: #000;
-  --color-white: #ffffff;
+  --color-white: #FFF;
+  --background: #f1f1f1;
+  --background-hover: #ffffff0d;
+
+  --font-size-btn: 1.3em;
 }
 
 body {
@@ -21,6 +26,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
