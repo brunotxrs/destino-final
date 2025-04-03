@@ -12,17 +12,21 @@ function RendaScreen() {
         navigation('/objetivo-screen')
     };
 
+    const handleNextClick = () => {
+        navigation('/despesa-screen')
+    }
+
     return (
 
         <div className="container-screen-mobile">
 
             <div className="info-mobile">
                 <p className="p-mobile">
-                    Descreva sua renda fixa e renda não fixa.
+                Qual a sua renda?
                 </p>
                 <p>
                     <span className="span-mobile">
-                        (ex: "Salário ou Outros")
+                        (ex: "Salário, outros ganhos")
                     </span>
                 </p>
             </div>
@@ -36,7 +40,9 @@ function RendaScreen() {
                     <FontAwesomeIcon 
                     icon={faArrowLeft} />
                 </span>
-                <span className="ico-mobile">
+                <span className="ico-mobile"
+                onClick={handleNextClick}
+                >
                     <FontAwesomeIcon 
                     icon={faArrowRight} />
                 </span>
