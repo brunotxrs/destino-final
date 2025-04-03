@@ -10,7 +10,7 @@
 
 .info-mobile {
     width: 100%;
-    padding: 20px 0 10px 0;
+    padding: 20px 0 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,11 +25,14 @@
 .p-mobile {
     color: var(--color-third);
     text-shadow: 0.5px .5px 0.5px var(--color-second);
+    font-family: var(--font);
 }
 
 .span-mobile {
     color: var(--color-first);
-    font-weight: 600;
+    font-weight: 700;
+    font-family: var(--font);
+    line-height: 40px;
 
 }
 
