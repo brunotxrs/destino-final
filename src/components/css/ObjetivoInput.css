@@ -20,7 +20,7 @@
                 margin-left: 20px;
                 font-family: var(--font);
                 color: var(--color-third);
-                font-size: 1em;
+                font-size: var(--font-size);
                 font-weight: 500;
             }
 
@@ -39,7 +39,7 @@
                     align-items: center;
                     border: 1.5px solid var(--color-third);
                     text-indent: 0.3rem;
-                    font-size: 1.2em;
+                    font-size: var(--font-size);
                     font-family: var(--font);
                     font-weight: 500;
                     background-color: var(--background);
@@ -61,7 +61,7 @@
                     align-items: center;
                     border: 1.5px solid var(--color-third);
                     text-indent: 0.3rem;
-                    font-size: 1.2em;
+                    font-size: var(--font-size);
                     font-family: var(--font);
                     font-weight: 500;
                     background-color: var(--background);
@@ -92,7 +92,7 @@
                     .icon-minus {
                         width: 30px;
                         height: 30px;
-                        font-size: var(--font-size-btn);
+                        font-size: var(--font-size);
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -124,7 +124,7 @@
                 .icon-plus {
                     width: 35px;
                     height: 35px;
-                    font-size: var(--font-size-btn);
+                    font-size: var(--font-size);
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -141,7 +141,6 @@
                     background-color: var(--color-third);
                     margin-left: -10px;
                 }
-
 
 
             }
