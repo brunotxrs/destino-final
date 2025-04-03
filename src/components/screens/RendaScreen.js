@@ -2,7 +2,8 @@ import React from "react";
 
 import "../css/RendaScreen.css"
 import logo from "../../assets/mobile/logo-destino-final-mobile.svg"
-import BotaoPrincipal from "../ui/BotaoPrincipal";
+import ObjetivoInput from "../ui/ObjetivoInput";
+import RendaInput from "../ui/RendaInput";
 
 
 function RendaScreen() {
@@ -13,7 +14,8 @@ function RendaScreen() {
             <div className="box-img-mobile">
                 <img src={logo} />
             </div>
-            <BotaoPrincipal />
+            <ObjetivoInput />
+            <RendaInput />
 
 
         </div>
