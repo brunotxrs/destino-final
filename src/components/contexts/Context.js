@@ -8,6 +8,7 @@ export const ContextsProvider = (props) => {
 
     const [objetivos , setObjetivos] = useState([]);
     const [rendas ,  setRendas] = useState([]);
+    const [despesas, setDespesas] = useState([]);
     
     const [nextId , setNextId] = useState(0);
 
@@ -21,12 +22,21 @@ export const ContextsProvider = (props) => {
         setNextId(nextId + 1);
     };
 
+    const handleAddDespesa = () => {
+        setDespesas([...despesas, { id: nextId, texto:"", valor: "" }]);
+        setNextId(nextId + 1);
+    };
+
     const handleRemoveObjetivo = (idToRemove) => {
         setObjetivos(objetivos.filter(objetivo => objetivo.id !== idToRemove));
     };
 
     const handleRemoveRenda = (idToRemove) => {
         setRendas(rendas.filter(renda => renda.id !== idToRemove))
+    };
+
+    const handleRemoveDespesa = (idToRemove) => {
+        setDespesas(despesas.filter(despesa => despesa.id !== idToRemove))
     };
 
     const handleObjetivoChange = (id , field , value) => {
@@ -45,6 +55,16 @@ export const ContextsProvider = (props) => {
     setRendas(novasRendas);
     };
 
+
+    const handleDespesaChange = (id, field, value) => {
+        const novasDespesas = despesas.map((despesa) => 
+        despesa.id === id ? { ...despesa, [field]: value} : despesa
+    );
+
+    setDespesas(novasDespesas);
+
+    };
+
     return (
         <Contexts.Provider 
         value={{ 
@@ -55,7 +75,11 @@ export const ContextsProvider = (props) => {
             rendas, 
             handleAddRenda, 
             handleRemoveRenda, 
-            handleRendaChange}}>
+            handleRendaChange,
+            despesas, 
+            handleAddDespesa, 
+            handleRemoveDespesa, 
+            handleDespesaChange}}>
                 {props.children}
         </Contexts.Provider>
     )
