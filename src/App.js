@@ -1,11 +1,24 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import ObjetivoScreen from './components/screens/ObjetivoScreen';
 import RendaScreen from './components/screens/RendaScreen';
+import Logo from './components/ui/Logo';
+
 
 function App() {
   return (
     <div className="App">
+      <Logo />
+      <BrowserRouter>
+      <Routes>
+     
+        <Route path='/' element={<ObjetivoScreen />}/>
+        <Route path='/renda-screen' element={<RendaScreen />} />
+      </Routes>
+      </BrowserRouter>
 
-      <RendaScreen />
+      
+      
 
     </div>
   );
