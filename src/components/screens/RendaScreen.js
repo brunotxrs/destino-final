@@ -1,10 +1,16 @@
 import React from "react";
 import RendaInput from "../ui/RendaInput";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 
 
 function RendaScreen() {
+
+    const navigation = useNavigate()
+    const handleBackClick = () => {
+        navigation('/objetivo-screen')
+    };
 
     return (
 
@@ -12,11 +18,11 @@ function RendaScreen() {
 
             <div className="info-mobile">
                 <p className="p-mobile">
-                    Descreva seus objetivos e as metas que deseja alcançar.
+                    Descreva sua renda fixa e renda não fixa.
                 </p>
                 <p>
                     <span className="span-mobile">
-                        (ex: "Comprar um carro")
+                        (ex: "Salário ou Outros")
                     </span>
                 </p>
             </div>
@@ -24,6 +30,12 @@ function RendaScreen() {
             <RendaInput />
 
             <div className="box-icone-mobile">
+                <span className="ico-mobile"
+                onClick={handleBackClick}
+                >
+                    <FontAwesomeIcon 
+                    icon={faArrowLeft} />
+                </span>
                 <span className="ico-mobile">
                     <FontAwesomeIcon 
                     icon={faArrowRight} />
