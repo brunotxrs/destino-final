@@ -37,10 +37,11 @@
     display: flex;
     width: 100%;
     align-items: end;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 0 30px;
     height: 200px;
 }
+
 
 .ico-mobile {
     width: 50px;
@@ -53,7 +54,6 @@
     border-radius: 50%;
     background-color: var(--color-second);
     color: var( --color-white);
-    margin-left: -13px;
 
 }
 
