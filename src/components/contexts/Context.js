@@ -6,14 +6,10 @@ export const Contexts = createContext();
 
 export const ContextsProvider = (props) => {
 
-    const [objetivos , setObjetivos] = useState([
-        {id:0, texto:"", valor:""}
-    ]);
-    const [rendas ,  setRendas] = useState([
-        {id:0, texto: "", valor:""}
-    ]);
+    const [objetivos , setObjetivos] = useState([]);
+    const [rendas ,  setRendas] = useState([]);
     
-    const [nextId , setNextId] = useState(1);
+    const [nextId , setNextId] = useState(0);
 
     const handleAddObjetivo = () => {
         setObjetivos([...objetivos, { id: nextId, texto: "", valor: "" }]);
