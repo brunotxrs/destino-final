@@ -1,7 +1,5 @@
 .renda-container {
     width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
 
     .box-img-mobile {
         width: 100%;

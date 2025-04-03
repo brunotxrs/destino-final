@@ -15,8 +15,13 @@
   --color-white: #FFF;
   --background: #f1f1f1;
   --background-hover: #ffffff0d;
+  --background-fieldset: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); 
 
   --font-size-btn: 1.3em;
+}
+
+html {
+  background-color: #e5e5e5;
 }
 
 body {
@@ -26,6 +31,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--background-fieldset);
+  height: 100vh;
+  user-select: none;
 
 }
 

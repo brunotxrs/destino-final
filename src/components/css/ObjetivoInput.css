@@ -13,6 +13,7 @@
             border-color: var(--color-third);
             box-shadow: 2px 2px 1px var(--color-second);
             width: calc(100vw - 20px);
+            background: var(--background-fieldset);
 
 
             legend {
