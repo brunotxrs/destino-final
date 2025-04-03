@@ -14,6 +14,7 @@ function App() {
      
         <Route path='/' element={<ObjetivoScreen />}/>
         <Route path='/renda-screen' element={<RendaScreen />} />
+        <Route path='/objetivo-screen' element={<ObjetivoScreen />} />
       </Routes>
       </BrowserRouter>
 
