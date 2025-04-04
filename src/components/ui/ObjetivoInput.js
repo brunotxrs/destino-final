@@ -31,7 +31,7 @@ function ObjetivoInput() {
                         onChange={(e) => handleObjetivoChange(objetivo.id, 'texto', e.target.value)}
                         />
 
-                        <input className="input" type="number" placeholder="Valor R$"
+                        <input className="input" type="number" placeholder="R$ ex: 1000.00"
                         autoComplete="off"
                         value={objetivo.valor}
                         onChange={(e) => handleObjetivoChange(objetivo.id, 'valor', e.target.value)}

@@ -33,7 +33,7 @@ function RendaInput() {
                             }
                             />
                     
-                            <input className="input" type="number" placeholder="Valor R$"
+                            <input className="input" type="number" placeholder="R$ ex: 1000.00"
                             autoComplete="off"
                             value={renda.valor}
                             onChange={(f) => 
