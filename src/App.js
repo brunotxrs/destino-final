@@ -5,6 +5,7 @@ import RendaScreen from './components/screens/RendaScreen';
 import Logo from './components/ui/Logo';
 import DespesaScreen from './components/screens/DespesaScreen';
 import HistoricScreen from './components/screens/HistoricScreen';
+import PlanejamentoScreen from './components/screens/PlanejamentoScreen';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path='/objetivo-screen' element={<ObjetivoScreen />} />
         <Route path='/despesa-screen' element={<DespesaScreen />} />
         <Route path='/historic-screen' element={<HistoricScreen />} />
+        <Route path='/planejamento-screen' element={<PlanejamentoScreen />} />
       </Routes>
       </BrowserRouter>
 
