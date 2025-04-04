@@ -15,7 +15,11 @@ function HistoricScreen() {
 
     const handleBackClick = () => {
         navigation('/despesa-screen')
-    }
+    };
+
+    const handleNextClick = () => {
+        navigation('/planejamento-screen')
+    };
 
     const temObjetivo = objetivos.some( objetivo => objetivo.valor !== "");
 
@@ -124,7 +128,7 @@ function HistoricScreen() {
                     icon={faArrowLeft} />
                 </span>
                 <span className="ico-mobile"
-                
+                onClick={handleNextClick}
                 >
                     <FontAwesomeIcon 
                     icon={faArrowRight} />
