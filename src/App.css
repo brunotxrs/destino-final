@@ -16,16 +16,15 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: var(--font-size);
-    font-family: var(--font);
-    font-weight: 500;
 
 }
 
-.p-mobile {
+.title-mobile {
     color: var(--color-third);
     text-shadow: 0.5px .5px 0.5px var(--color-second);
     font-family: var(--font);
+    font-size: var(--title);
+    padding: 0 5px;
 }
 
 .span-mobile {
@@ -33,6 +32,7 @@
     font-weight: 700;
     font-family: var(--font);
     line-height: 40px;
+    font-size: var(--paragraph);
 
 }
 
@@ -50,7 +50,6 @@
 .ico-mobile {
     width: 50px;
     height: 50px;
-    font-size: var(--font-size);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,6 +57,7 @@
     border-radius: 50%;
     background-color: var(--color-second);
     color: var( --color-white);
+    font-size: var(--icon);
 
 }
 

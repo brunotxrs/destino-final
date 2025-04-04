@@ -23,7 +23,7 @@
     margin-left: 20px;
     font-family: var(--font);
     color: var(--color-third);
-    font-size: var(--font-size);
+    font-size: var(--paragraph);
     font-weight: 500;
 }
 
@@ -44,7 +44,7 @@
     align-items: center;
     border: 1.5px solid var(--color-third);
     text-indent: 0.3rem;
-    font-size: var(--font-size);
+    font-size: var(--paragraph);
     font-family: var(--font);
     font-weight: 500;
     background-color: var(--background);
@@ -66,7 +66,7 @@
     align-items: center;
     border: 1.5px solid var(--color-third);
     text-indent: 0.3rem;
-    font-size: var(--font-size);
+    font-size: var(--paragraph);
     font-family: var(--font);
     font-weight: 500;
     background-color: var(--background);
@@ -100,14 +100,14 @@
 .icon-minus {
     width: 30px;
     height: 30px;
-    font-size: var(--font-size);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5px;
     border-radius: 50%;
     background-color: var(--color-second);
-    color: var( --color-white);
+    color: var(--color-white);
+    font-size: var(--icon);
 }
 
 .icon-minus:hover {
@@ -129,7 +129,6 @@
 .icon-plus {
     width: 35px;
     height: 35px;
-    font-size: var(--font-size);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,12 +136,11 @@
     border-radius: 50%;
     color: var(--color-white);
     background-color: var(--color-second);
+    font-size: var(--icon);
     margin-left: -10px;
 }
 
-.icon-plus:hover {
-    
+.icon-plus:hover {    
     color: var(--color-second);
     background-color: var(--color-third);
-    margin-left: -10px;
 }
