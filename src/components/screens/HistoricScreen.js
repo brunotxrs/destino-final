@@ -33,7 +33,7 @@ function HistoricScreen() {
                 <div className="box-historic" key={objetivo.id}>
                     <div className="box-objetivo">
                         <span>{objetivo.texto}</span>
-                        <span>{objetivo.valor}</span>
+                        <span>R$ {objetivo.valor}</span>
                     </div>
                 </div>
             ))}
@@ -42,7 +42,7 @@ function HistoricScreen() {
                 <div className="box-historic" key={renda.id}>
                     <div className="box-objetivo">
                         <span>{renda.texto}</span>
-                        <span>{renda.valor}</span>
+                        <span>R$ {renda.valor}</span>
                     </div>
                 </div>
             ))}
@@ -51,12 +51,12 @@ function HistoricScreen() {
                 <div className="box-historic" key={despesa.id}>
                     <div className="box-objetivo">
                         <span>{despesa.texto}</span>
-                        <span>{despesa.valor}</span>
+                        <span>R$ {despesa.valor}</span>
                     </div>
                 </div>
             ))}
 
-            <h3 className="sub-title">Resultado das Despesas:</h3>
+            <h3 className="sub-title-result">Resultado das Despesas:</h3>
             <div className="test">
                 <span>R$ {resultadoDespesas.toFixed(2)}</span>
             </div>
