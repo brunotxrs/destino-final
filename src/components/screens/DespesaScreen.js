@@ -12,6 +12,10 @@ function DespesaScreen() {
         navigation('/renda-screen')
     }
 
+    const handleNextClick = () => {
+        navigation('/historic-screen')
+    }
+
     return (
         <div className="container-screen-mobile">
             <div className="info-mobile">
@@ -34,7 +38,9 @@ function DespesaScreen() {
                     <FontAwesomeIcon 
                     icon={faArrowLeft} />
                 </span>
-                <span className="ico-mobile">
+                <span className="ico-mobile"
+                onClick={handleNextClick}
+                >
                     <FontAwesomeIcon 
                     icon={faArrowRight} />
                 </span>
