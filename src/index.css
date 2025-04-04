@@ -17,7 +17,9 @@
   --background-hover: #ffffff0d;
   --background-fieldset: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); 
 
-  --font-size: 1.3em;
+  --title: 1.2em;
+  --paragraph: 1.125em;
+  --icon: 1.4em
 }
 
 html {
