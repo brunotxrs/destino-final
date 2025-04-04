@@ -1,0 +1,37 @@
+.container-resultado-renda {
+    width: 100%;
+
+    .box {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sub-title-result {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        padding: 0 0 0 20px ;
+        font-family: var(--font);
+        font-size: var(--paragraph);
+        background: var(--color-second);
+        color: var(--color-white);
+        font-weight: 500;
+    }
+
+    span {
+        width: 100%;
+        background-color: var(--color-second);
+        font-family: var(--font);
+        font-size: var(--paragraph);
+        color: var(--color-white);
+        font-weight: 500;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        padding: 0 20px 0 0;
+
+    }
+}
