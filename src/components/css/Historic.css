@@ -64,7 +64,7 @@
         display: flex;
         align-items: center;
         justify-content: left;
-        text-indent: 15px;
+        text-indent: 10px;
         font-family: var(--font);
         font-size: var(--paragraph);
         background: var(--color-second);
@@ -73,13 +73,13 @@
 
     }
 
-    .test {
+    .result {
         display: flex;
-        justify-content: right;
+        width: 100%;
 
         span {
+            width: 100%;
             background-color: var(--color-second);
-            padding: 0 20px;
             font-family: var(--font);
             font-size: var(--paragraph);
             color: var(--color-white);
@@ -87,9 +87,13 @@
             height: 30px;
             display: flex;
             align-items: center;
+            justify-content: right;
+            padding: 0 20px 0 0;
 
         }
 
     }
+
+    
 
 }
