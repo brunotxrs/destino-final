@@ -87,6 +87,10 @@
     background-color: var(--background-hover);
 }
 
+.input::placeholder {
+    font-size: 0.81em;
+}
+
 
 .box-icon-input-mobile {
     width: 35px;
