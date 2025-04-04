@@ -21,9 +21,9 @@ function RendaScreen() {
         <div className="container-screen-mobile">
 
             <div className="info-mobile">
-                <p className="p-mobile">
+                <h1 className="title-mobile">
                 Qual a sua renda?
-                </p>
+                </h1>
                 <p>
                     <span className="span-mobile">
                         (ex: "Salário, outros ganhos")
