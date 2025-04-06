@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2f8d1b13.css",
+    "main.js": "/static/js/main.2185456d.js",
+    "static/js/453.e316aa3b.chunk.js": "/static/js/453.e316aa3b.chunk.js",
+    "static/media/logo-destino-final-mobile.svg": "/static/media/logo-destino-final-mobile.26233759d2b0aaf09e54705a33cb1fa5.svg",
+    "index.html": "/index.html",
+    "main.2f8d1b13.css.map": "/static/css/main.2f8d1b13.css.map",
+    "main.2185456d.js.map": "/static/js/main.2185456d.js.map",
+    "453.e316aa3b.chunk.js.map": "/static/js/453.e316aa3b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f8d1b13.css",
+    "static/js/main.2185456d.js"
+  ]
+}
