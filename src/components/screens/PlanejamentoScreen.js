@@ -73,18 +73,21 @@ function PlanejamentoScreen() {
 
     console.log(valorSeparado, "valor separado")
 
+    const temValorSeparado = valorSeparado !== 0;
+
     return (
         <div className="container-planejamento">
             <div className="box-planejamento">
                 <h1>Planejamento</h1>
-                <p className="box-paragraph">Defina a base do seu planejamento. Você pode escolher uma porcentagem ou inserir um valor personalizado.</p>
+                <p className="box-paragraph">Defina a base do seu planejamento. 
+                Você pode escolher uma porcentagem ou inserir um valor personalizado.</p>
                 <ResultadoRenda />
             </div>
 
             <div className="box-section">
                 <label htmlFor="ten">
                     <span>10%</span>
-                    <div className="input">
+                    <div className="box-input">
                         <input type="radio"
                             id="ten"
                             value="ten"
@@ -96,7 +99,7 @@ function PlanejamentoScreen() {
                 </label>
                 <label htmlFor="twenty">
                     <span>20%</span>
-                    <div className="input">
+                    <div className="box-input">
                         <input type="radio"
                             id="twenty"
                             value="twenty"
@@ -108,7 +111,7 @@ function PlanejamentoScreen() {
                 </label>
                 <label htmlFor="thirty">
                     <span>30%</span>
-                    <div className="input">
+                    <div className="box-input">
                         <input type="radio"
                             id="thirty"
                             value="thirty"
@@ -120,7 +123,7 @@ function PlanejamentoScreen() {
                 </label>
                 <label htmlFor="forty">
                     <span>40%</span>
-                    <div className="input">
+                    <div className="box-input">
                         <input type="radio"
                             id="forty"
                             value="forty"
@@ -133,6 +136,7 @@ function PlanejamentoScreen() {
             </div>
 
             <div className="box-section-custom-value">
+
                 <label htmlFor="valor-customizado">
                     <span>Defina um Valor (R$)</span>
                     <input
@@ -146,13 +150,20 @@ function PlanejamentoScreen() {
                 </label>
             </div>
 
-            <div className="box-calculation">
-                <h3>Valor a ser separado:
-                    <span>({selectedPercentageLocal ? selectedPercentageLocal.replace('ten', '10%').replace('twenty', '20%').replace('thirty', '30%').replace('forty', '40%') : valorPersonalizado ? 'Personalizado' : '0%'})
-                    </span>
-                </h3>
-                <p>{formatCurrency(parseFloat(valorPersonalizado) > 0 ? parseFloat(valorPersonalizado) : (saldoLiquido * (selectedPercentageLocal === 'ten' ? 0.1 : selectedPercentageLocal === 'twenty' ? 0.2 : selectedPercentageLocal === 'thirty' ? 0.3 : selectedPercentageLocal === 'forty' ? 0.4 : 0)))}</p>
-            </div>
+            
+            {temValorSeparado && (
+                
+                <div className="box-calculation">
+                    <h3>Valor a ser separado:
+                        <span>({selectedPercentageLocal ? selectedPercentageLocal.replace('ten', '10%').replace('twenty', '20%').replace('thirty', '30%').replace('forty', '40%') : valorPersonalizado ? 'Personalizado' : '0%'})
+                        </span>
+                    </h3>
+
+                    <p>
+                        {formatCurrency(parseFloat(valorPersonalizado) > 0 ? parseFloat(valorPersonalizado) : (saldoLiquido * (selectedPercentageLocal === 'ten' ? 0.1 : selectedPercentageLocal === 'twenty' ? 0.2 : selectedPercentageLocal === 'thirty' ? 0.3 : selectedPercentageLocal === 'forty' ? 0.4 : 0)))}
+                    </p>
+                </div>
+            )}
 
             <div className="box-icone-mobile">
                 <span className="ico-mobile" onClick={handleBackClick}>
