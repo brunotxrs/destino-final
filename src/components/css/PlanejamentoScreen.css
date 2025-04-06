@@ -1,6 +1,5 @@
 .container-planejamento {
     width: 100%;
-    outline: 1px solid red;
     display: flex;
     flex-direction: column;
 
@@ -9,7 +8,6 @@
         flex-direction: column;
         justify-content: space-evenly;
         height: 150px;
-        outline: 1px solid orange;
 
         h1 {
             display: flex;
