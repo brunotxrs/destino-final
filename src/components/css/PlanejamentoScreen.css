@@ -1,0 +1,38 @@
+.container-planejamento {
+    width: 100%;
+    outline: 1px solid red;
+    display: flex;
+    flex-direction: column;
+
+    .box-planejamento {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 150px;
+        outline: 1px solid orange;
+
+        h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font);
+            font-size: var(--title);
+            color: var(--color-first);
+            text-shadow: 0.5px .5px 0.5px var(--color-second);
+
+        }
+
+       .oxi {
+            width: 100%;
+            font-family: var(--font);
+            font-size: var(--paragraph);
+            background: var(--color-second);
+            color: var(--color-white);
+            font-weight: 500;
+            padding: 0 0 0 20px;
+            margin-top: -5px;
+        }
+    }
+    
+}
+
