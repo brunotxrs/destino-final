@@ -28,6 +28,10 @@ function PlanejamentoScreen() {
         navigation('/historic-screen');
     };
 
+    const handleNextScreen = () => {
+        navigation('/previsao-conclusao-objetivo')
+    }
+
     const handlePercentageChange = (event) => {
         const percentageValue = event.target.value;
         setSelectedPercentageLocal(percentageValue);
@@ -70,8 +74,6 @@ function PlanejamentoScreen() {
             maximumFractionDigits: 2,
         });
     };
-
-    console.log(valorSeparado, "valor separado")
 
     const temValorSeparado = valorSeparado !== 0;
 
@@ -169,7 +171,9 @@ function PlanejamentoScreen() {
                 <span className="ico-mobile" onClick={handleBackClick}>
                     <FontAwesomeIcon icon={faArrowLeft} />
                 </span>
-                <span className="ico-mobile">
+                <span className="ico-mobile"
+                onClick={handleNextScreen}
+                >
                     <FontAwesomeIcon icon={faArrowRight} />
                 </span>
             </div>
