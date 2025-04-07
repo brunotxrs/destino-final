@@ -114,7 +114,7 @@
                 padding: 5px 0;
             }
 
-            input[type="number"] {
+            .input-custom-value {
                 width: 70%;
                 height: 35px;
                 display: flex;
@@ -129,15 +129,15 @@
                    
             }
 
-            input[type="number"]::-webkit-outer-spin-button,
-            input[type="number"]::-webkit-inner-spin-button {
+            .input-custom-value::-webkit-outer-spin-button,
+            .input-custom-value::-webkit-inner-spin-button {
                 -webkit-appearance: none;
                 margin: 0; 
             }
 
-            input[type="number"]:hover, 
-            input[type="number"]:active, 
-            input[type="number"]:focus {
+            .input-custom-value:hover, 
+            .input-custom-value:active, 
+            .input-custom-value:focus {
                 outline: none;
                 border: 1.5px solid var(--color-white); 
                 background-color: var(--background-hover);
