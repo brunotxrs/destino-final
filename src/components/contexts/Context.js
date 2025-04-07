@@ -3,7 +3,8 @@ import React, { createContext, useState } from "react";
 export const Contexts = createContext();
 
 export const ContextsProvider = (props) => {
-    const [objetivos, setObjetivos] = useState([]);
+    
+    const [objetivos , setObjetivos] = useState([]);
     const [rendas, setRendas] = useState([]);
     const [despesas, setDespesas] = useState([]);
     const [nextId, setNextId] = useState(0);
@@ -37,26 +38,26 @@ export const ContextsProvider = (props) => {
         setDespesas(despesas.filter(despesa => despesa.id !== idToRemove));
     };
 
-    const handleObjetivoChange = (id, field, value) => {
-        const newValue = field === 'valor' ? Number(value) : value;
+    const handleObjetivoChange = (id , field , value) => {
         const novosObjetivos = objetivos.map((objetivo) =>
-            objetivo.id === id ? { ...objetivo, [field]: newValue } : objetivo
+            objetivo.id === id ? { ...objetivo, [field]: value} : objetivo
         );
+
         setObjetivos(novosObjetivos);
     };
 
     const handleRendaChange = (id, field, value) => {
-        const newValue = field === 'valor' ? Number(value) : value;
+        
         const novasRendas = rendas.map((renda) =>
-            renda.id === id ? { ...renda, [field]: newValue } : renda
+            renda.id === id ? { ...renda, [field]: value } : renda
         );
         setRendas(novasRendas);
     };
 
     const handleDespesaChange = (id, field, value) => {
-        const newValue = field === 'valor' ? Number(value) : value;
+        
         const novasDespesas = despesas.map((despesa) =>
-            despesa.id === id ? { ...despesa, [field]: newValue } : despesa
+            despesa.id === id ? { ...despesa, [field]: value } : despesa
         );
         setDespesas(novasDespesas);
     };

@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import '../css/Input.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
-import { Contexts } from "../contexts/Context"; 
+import { Contexts } from "../contexts/Context";
 
 function ObjetivoInput() {
     const {
@@ -31,11 +31,11 @@ function ObjetivoInput() {
                         onChange={(e) => handleObjetivoChange(objetivo.id, 'texto', e.target.value)}
                         />
 
-                        <input className="input-number" type="number" placeholder="Valor"
-                        autoComplete="off"
-                        value={objetivo.valor}
-                        onChange={(e) => handleObjetivoChange(objetivo.id, 'valor', e.target.value)}
-                        />
+                        <input className="input-number" type="number" placeholder="Valor R$"
+                         autoComplete="off"
+                         value={objetivo.valor}
+                         onChange={(e) => handleObjetivoChange(objetivo.id, 'valor', e.target.value)}
+                         />
 
                         <div className="box-icon-input-mobile">  
                             <span className="icon-minus" onClick={() => handleRemoveObjetivo(objetivo.id)}>
