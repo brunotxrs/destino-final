@@ -33,8 +33,8 @@ function DespesaInput() {
                                 handleDespesaChange(despesa.id, "texto", g.target.value)
                             }/>
 
-                            <input className="input" type="number" 
-                            placeholder="R$ ex: 1000.00"
+                            <input className="input-number" type="number" 
+                            placeholder="Valor"
                             autoComplete="off" 
                             value={despesa.valor}
                             onChange={(g) => 
