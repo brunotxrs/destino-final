@@ -59,7 +59,7 @@
     
 }
 
-.input[type="number"] {
+.input-number {
     width: 35%;
     height: 35px;
     display: flex;
@@ -73,22 +73,18 @@
        
 }
 
-.input[type="number"]::-webkit-outer-spin-button,
-.input[type="number"]::-webkit-inner-spin-button {
+.input-number::-webkit-outer-spin-button,
+.input-number::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; 
 }
 
-.input[type="number"]:hover, 
-.input[type="number"]:active, 
-.input[type="number"]:focus {
+.input-number:hover, 
+.input-number:active, 
+.input-number:focus {
     outline: none;
     border: 1.5px solid var(--color-second); 
     background-color: var(--background-hover);
-}
-
-.input::placeholder {
-    font-size: 0.81em;
 }
 
 
