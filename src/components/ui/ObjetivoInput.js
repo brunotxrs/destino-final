@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { Contexts } from "../contexts/Context";
 
+import { NumericFormat } from "react-number-format";
+
 function ObjetivoInput() {
     const {
         objetivos, 
@@ -31,11 +33,23 @@ function ObjetivoInput() {
                         onChange={(e) => handleObjetivoChange(objetivo.id, 'texto', e.target.value)}
                         />
 
-                        <input className="input-number" type="number" placeholder="Valor R$"
-                         autoComplete="off"
-                         value={objetivo.valor}
-                         onChange={(e) => handleObjetivoChange(objetivo.id, 'valor', e.target.value)}
-                         />
+                        <NumericFormat 
+                        className="input-number" 
+                        placeholder="Valor" 
+                        value={objetivo.valor} 
+                        onValueChange={(values) => {
+                            const {value} = values ;
+                            handleObjetivoChange(objetivo.id, 'valor', value);
+                        }}
+                        decimalSeparator="," 
+                        thousandSeparator="." 
+                        prefix="R$ " 
+                        decimalScale={2} 
+                        fixedDecimalScale={true} 
+                        allowLeadingZeros={false} 
+                        valueIsNumericString={true}
+
+                        />
 
                         <div className="box-icon-input-mobile">  
                             <span className="icon-minus" onClick={() => handleRemoveObjetivo(objetivo.id)}>

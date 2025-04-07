@@ -3,6 +3,7 @@ import '../css/Input.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { Contexts } from "../contexts/Context"
+import { NumericFormat } from "react-number-format";
 
 
 function RendaInput() {
@@ -33,12 +34,22 @@ function RendaInput() {
                             }
                             />
                     
-                            <input className="input-number" type="number" placeholder="Valor"
-                            autoComplete="off"
-                            value={renda.valor}
-                            onChange={(f) => 
-                                handleRendaChange(renda.id, 'valor', f.target.value)
-                            }
+                            <NumericFormat 
+                            className="input-number" 
+                            placeholder="Valor" 
+                            value={renda.valor} 
+                            onValueChange={(values) => {
+                            const {value} = values ;
+                            handleRendaChange(renda.id, 'valor', value);
+                            }}
+                            decimalSeparator="," 
+                            thousandSeparator="." 
+                            prefix="R$ " 
+                            decimalScale={2} 
+                            fixedDecimalScale={true} 
+                            allowLeadingZeros={false} 
+                            valueIsNumericString={true}
+    
                             />
                     
                             <div className="box-icon-input-mobile">  
