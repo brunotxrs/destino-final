@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+<h1 align="center"><strong>DESTINO FINAL $</strong></h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Planner de Metas Financeiras Mobile
 
-## Available Scripts
+## Uma Jornada Personalizada Rumo aos Seus Sonhos Financeiros
 
-In the project directory, you can run:
+Este projeto representa um aplicativo mobile intuitivo e elegante, cuidadosamente arquitetado para capacitar os usuários a assumirem o controle de suas finanças e, o mais importante, a transformarem seus sonhos em metas tangíveis e alcançáveis. Mais do que um simples rastreador de gastos, este planner de metas financeiras atua como um guia pessoal, conduzindo o usuário através de um processo passo a passo para definir, planejar e visualizar a concretização de seus objetivos financeiros.
 
-### `npm start`
+### Funcionalidades Principais:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **Definição de Objetivos Claros:** A jornada começa com a materialização dos sonhos. O aplicativo permite que os usuários descrevam seus objetivos financeiros de forma detalhada, atribuindo valores monetários específicos a cada um deles. Seja a compra de um carro novo, a entrada para um imóvel, uma viagem inesquecível ou a construção de uma reserva de emergência, o primeiro passo é dar forma a esses desejos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **Registro Intuitivo de Rendas e Despesas:** Para entender o ponto de partida e o caminho a seguir, o aplicativo oferece uma interface simples e eficiente para o registro de todas as fontes de renda e os diversos tipos de despesas. Essa visão clara do fluxo financeiro pessoal é fundamental para um planejamento eficaz.
 
-### `npm test`
+* **Histórico Detalhado:** Uma tela de histórico abrangente consolida todas as informações inseridas, apresentando um panorama claro dos objetivos definidos, das rendas totais, das despesas totais e do saldo líquido disponível. Este histórico serve como um ponto de referência valioso para o acompanhamento da saúde financeira.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Planejamento Estratégico:** O coração do aplicativo reside na tela de planejamento. Aqui, o usuário pode definir uma estratégia de alocação de recursos para seus objetivos. A flexibilidade é chave: o usuário pode optar por separar uma porcentagem predefinida do seu saldo líquido (10%, 20%, 30% ou 40%) ou inserir um valor personalizado, adaptando o planejamento à sua realidade financeira e prioridades.
 
-### `npm run build`
+* **Visualização da Conclusão dos Objetivos:** A motivação é alimentada pela visão do futuro. Com base no valor separado para o planejamento, o aplicativo calcula e exibe uma previsão estimada do tempo necessário para alcançar cada objetivo definido. Essa funcionalidade transforma o planejamento em progresso visível, incentivando a disciplina e a persistência.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Arquitetura e Tecnologias:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* **React:** A interface de usuário é construída com a biblioteca JavaScript React, proporcionando uma experiência fluida, reativa e componentizada.
+* **React Router DOM:** A navegação entre as diferentes telas do aplicativo é gerenciada de forma eficiente e intuitiva com React Router DOM.
+* **Context API:** O gerenciamento de estado global da aplicação é realizado através da Context API do React, permitindo que os dados (objetivos, rendas, despesas, valor separado) sejam compartilhados de maneira acessível entre os diferentes componentes, mantendo a integridade e a consistência das informações.
+* **CSS:** A estilização da aplicação é cuidadosamente implementada com arquivos CSS modulares, utilizando variáveis CSS (`:root`) para manter a consistência visual e facilitar a manutenção. A interface é projetada para ser responsiva e agradável em dispositivos mobile.
+* **Font Awesome:** Ícones vetoriais do Font Awesome são utilizados para enriquecer a interface com elementos visuais intuitivos.
+* **`react-number-format`:** O componente `NumericFormat` é empregado para garantir a correta formatação de valores monetários, proporcionando uma visualização clara e padronizada.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Estrutura de Pastas:
 
-### `npm run eject`
+```
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │    ├── contexts/
+│   │    │   └── Context.js
+│   │    ├── css/
+│   │    │   ├── DespesaScreen.css
+│   │    │   ├── Historic.css
+│   │    │   ├── Logo.css
+│   │    │   ├── ObjetivoScreen.css
+│   │    │   ├── PlanejamentoScreen.css
+│   │    │   ├── Previsao.css
+│   │    │   ├── RendaScreen.css
+│   │    │   ├── ResultadoRenda.css
+│   │    │   └── screenMobile.css
+│   │    ├── screens/
+│   │    │   ├── DespesaScreen.js
+│   │    │   ├── HistoricScreen.js
+│   │    │   ├── ObjetivoScreen.js
+│   │    │   ├── PlanejamentoScreen.js
+│   │    │   ├── PrevisaoConclusaoObjetivo.js
+│   │    │   └── RendaScreen.js
+│   │    └── ui/
+│   │        ├── DespesaInput.js
+│   │        ├── Logo.js
+│   │        ├── ObjetivoInput.js
+│   │        ├── Previsao.js
+│   │        ├── RendaInput.js
+│   │        └── ResultadoRenda.js
+│   ├── App.css
+│   ├── App.js
+│   ├── index.css
+│   ├── index.js
+│   └── reportWebVitals.js
+├── .gitignore
+├── License
+├── package.json
+└── README.md
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Próximos Passos e Melhorias Potenciais:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* **Persistência de Dados:** Implementar mecanismos para salvar os dados do usuário (localmente ou em um backend) para que as informações não sejam perdidas ao fechar o aplicativo.
+* **Notificações e Lembretes:** Adicionar funcionalidades de notificações para lembrar o usuário de atualizar suas informações financeiras ou acompanhar o progresso de suas metas.
+* **Análises e Gráficos:** Integrar visualizações gráficas para facilitar a compreensão da distribuição de rendas e despesas, bem como o progresso em direção aos objetivos.
+* **Integração com Outras Ferramentas:** Explorar a possibilidade de integrar com outras ferramentas financeiras ou bancárias (com a devida segurança e consentimento do usuário).
+* **Personalização Avançada:** Oferecer opções de personalização mais profundas para o planejamento, como a definição de prioridades para os objetivos e diferentes estratégias de alocação de recursos.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Este Planner de Metas Financeiras é mais do que um aplicativo; é um parceiro na jornada rumo à realização dos seus sonhos financeiros, oferecendo as ferramentas e a visão necessária para transformar a aspiração em realidade.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📜Licença
+Este projeto está sob a [licença MIT](./License). Sinta-se à vontade para usar, modificar e compartilhar\! 🚀
 
-## Learn More
+## ✨ Developer
+👨‍💻 Este projeto foi desenvolvido por <strong>Bruno Teixeira</strong> como parte do meu portfólio de desenvolvimento Front-End. Sinta-se à vontade para entrar em contato ou contribuir com o projeto!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff)](https://www.linkedin.com/in/brunotxrs/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/brunotxrs)
