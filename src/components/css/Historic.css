@@ -78,6 +78,7 @@
         width: 100%;
         height: 30px;
         justify-content: right;
+        background-color: var(--color-second);
 
         span {
             width: 100%;
