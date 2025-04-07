@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { Contexts } from '../contexts/Context';
+import { NumericFormat } from "react-number-format";
 
 function PlanejamentoScreen() {
     const { rendas, despesas, valorSeparado, setValorSeparadoContext, setPorcentagemSelecionadaContext } = useContext(Contexts);
@@ -57,13 +58,15 @@ function PlanejamentoScreen() {
         setValorSeparadoContext(valorSeparadoCalculado);
     };
 
-    const handleValorPersonalizadoChange = (event) => {
+    const handleValorPersonalizadoChange = (values) => {
+        const { value } = values; // 'value' é a string formatada
         setSelectedPercentageLocal(null);
-        const valor = event.target.value;
-        setValorPersonalizado(valor);
+        setValorPersonalizado(value);
         setPorcentagemSelecionadaContext(null);
-        const valorNumerico = parseFloat(valor) || 0;
+        const valorNumerico = value ? parseFloat(value.replace(',', '.')) : 0;
         setValorSeparadoContext(valorNumerico);
+        console.log("Valor Personalizado (estado):", value); // Log do valor atualizado
+        console.log("Valor Separado (contexto):", valorNumerico);
     };
 
     const formatCurrency = (value) => {
@@ -141,28 +144,34 @@ function PlanejamentoScreen() {
 
                 <label htmlFor="valor-customizado">
                     <span>Defina um Valor (R$)</span>
-                    <input
-                        type="number"
+
+                    <NumericFormat 
                         id="valor-customizado"
                         className="input-custom-value"
-                        placeholder="Ex: 500.00"
-                        value={valorPersonalizado}
-                        onChange={handleValorPersonalizadoChange}
+                        placeholder="Valor" 
+                        value={valorPersonalizado} 
+                        onValueChange={handleValorPersonalizadoChange}
+                        decimalSeparator="," 
+                        thousandSeparator="." 
+                        prefix="R$ " 
+                        decimalScale={2} 
+                        fixedDecimalScale={true} 
+                        allowLeadingZeros={false} 
+                        valueIsNumericString={true}
+
                     />
                 </label>
             </div>
 
             
             {temValorSeparado && (
-                
                 <div className="box-calculation">
                     <h3>Valor a ser separado:
                         <span>({selectedPercentageLocal ? selectedPercentageLocal.replace('ten', '10%').replace('twenty', '20%').replace('thirty', '30%').replace('forty', '40%') : valorPersonalizado ? 'Personalizado' : '0%'})
                         </span>
                     </h3>
-
                     <p>
-                        {formatCurrency(parseFloat(valorPersonalizado) > 0 ? parseFloat(valorPersonalizado) : (saldoLiquido * (selectedPercentageLocal === 'ten' ? 0.1 : selectedPercentageLocal === 'twenty' ? 0.2 : selectedPercentageLocal === 'thirty' ? 0.3 : selectedPercentageLocal === 'forty' ? 0.4 : 0)))}
+                        {formatCurrency(valorSeparado)}
                     </p>
                 </div>
             )}
