@@ -1,6 +1,7 @@
 @import url(../../index.css);
 .container-input-mobile {
-    width: 100%; 
+    width: 100%;
+    
 }
 
 
@@ -143,4 +144,20 @@
 .icon-plus:hover {    
     color: var(--color-second);
     background-color: var(--color-third);
+}
+
+
+@media screen and (min-width: 700px) {
+    .container-input-mobile {
+        width: 400px;
+        height: calc(100vh - 360px);
+        overflow: auto;
+        scrollbar-width: none; 
+    }
+
+    .legend {
+        display: none;
+    }
+
+   
 }
