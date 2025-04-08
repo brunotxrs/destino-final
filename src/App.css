@@ -42,8 +42,7 @@
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
-    padding: 0 30px;
-    height: 200px;
+    padding: 40px 30px;
 
 }
 
@@ -67,6 +66,10 @@
     color: var( --color-second);
 }
 
+.container-screen-desktop {
+    display: none;
+}
+
 @media screen and (min-width: 700px) {
  
     .container-screen-mobile {
@@ -74,6 +77,8 @@
     }
 
     .container-screen-desktop {
+        display: flex;
+        flex-direction: column;
         
         .box-screen-desktop {
             display: flex;
