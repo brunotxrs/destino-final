@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/Logo.css"
-import logo from "../../assets/mobile/logo-destino-final-mobile.svg"
+import logo from "../../assets/mobile/logo.svg"
 
 function Logo() {
 
