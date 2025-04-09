@@ -71,16 +71,6 @@ Este projeto representa um aplicativo mobile intuitivo e elegante, cuidadosament
 └── README.md
 ```
 
-### Próximos Passos e Melhorias Potenciais:
-
-* **Persistência de Dados:** Implementar mecanismos para salvar os dados do usuário (localmente ou em um backend) para que as informações não sejam perdidas ao fechar o aplicativo.
-* **Notificações e Lembretes:** Adicionar funcionalidades de notificações para lembrar o usuário de atualizar suas informações financeiras ou acompanhar o progresso de suas metas.
-* **Análises e Gráficos:** Integrar visualizações gráficas para facilitar a compreensão da distribuição de rendas e despesas, bem como o progresso em direção aos objetivos.
-* **Integração com Outras Ferramentas:** Explorar a possibilidade de integrar com outras ferramentas financeiras ou bancárias (com a devida segurança e consentimento do usuário).
-* **Personalização Avançada:** Oferecer opções de personalização mais profundas para o planejamento, como a definição de prioridades para os objetivos e diferentes estratégias de alocação de recursos.
-
-Este Planner de Metas Financeiras é mais do que um aplicativo; é um parceiro na jornada rumo à realização dos seus sonhos financeiros, oferecendo as ferramentas e a visão necessária para transformar a aspiração em realidade.
-
 ## 📜Licença
 Este projeto está sob a [licença MIT](./License). Sinta-se à vontade para usar, modificar e compartilhar\! 🚀
 
