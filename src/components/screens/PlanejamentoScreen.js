@@ -148,7 +148,8 @@ function PlanejamentoScreen() {
                     <NumericFormat 
                         id="valor-customizado"
                         className="input-custom-value"
-                        placeholder="Valor" 
+                        placeholder="Valor"
+                        autoComplete="off" 
                         value={valorPersonalizado} 
                         onValueChange={handleValorPersonalizadoChange}
                         decimalSeparator="," 

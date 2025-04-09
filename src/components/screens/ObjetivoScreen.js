@@ -17,6 +17,10 @@ function ObjetivoScreen() {
 
     }
 
+    const handleClickDesktop = () => {
+        navigation('/historic')
+    }
+
     return (
         <div>
             <div className="container-screen-mobile">
@@ -70,7 +74,7 @@ function ObjetivoScreen() {
 
                 <div className="box-icone-mobile">
                     <span className="ico-mobile"
-                    onClick={handleClick}><FontAwesomeIcon
+                    onClick={handleClickDesktop}><FontAwesomeIcon
                     icon={faArrowRight} />
                     </span>
                 </div>
