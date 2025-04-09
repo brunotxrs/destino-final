@@ -7,6 +7,7 @@ import DespesaScreen from './components/screens/DespesaScreen';
 import HistoricScreen from './components/screens/HistoricScreen';
 import PlanejamentoScreen from './components/screens/PlanejamentoScreen';
 import PrevisaoConclusaoObjetivo from './components/screens/PrevisaoConclusaoObjetivo';
+import Historic from './components/screens/Historic';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path='/historic-screen' element={<HistoricScreen />} />
         <Route path='/planejamento-screen' element={<PlanejamentoScreen />} />
         <Route path='/previsao-conclusao-objetivo' element={<PrevisaoConclusaoObjetivo />} />
+        <Route path='/historic' element={<Historic />} />
       </Routes>
       </BrowserRouter>
 
