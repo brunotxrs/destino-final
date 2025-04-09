@@ -47,7 +47,12 @@ code {
 }
 
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) {
+
+  html {
+    background-color: var(--color-second);
+    scrollbar-width: none;
+  }
   
   body {
     width: 100vw;
