@@ -147,10 +147,10 @@
 }
 
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) {
     .container-input-mobile {
-        width: 400px;
-        height: calc(100vh - 360px);
+        width: 350px;
+        height: calc(100vh - 320px);
         overflow: auto;
         scrollbar-width: none; 
     }
